@@ -1,0 +1,143 @@
+.terminal {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #1a1a1a;
+  border-bottom: 1px solid var(--border);
+}
+
+.headerDots { display: flex; gap: 6px; }
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.headerTitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+  margin-right: 42px;
+}
+
+.body { padding: 0; }
+
+.block {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+}
+
+.block:last-child { border-bottom: none; }
+
+.blockInner { display: flex; align-items: center; gap: 8px; }
+
+.divider {
+  height: 1px;
+  background: var(--border-dim);
+  margin-top: 10px;
+}
+
+.prompt { color: var(--text-muted); }
+.cmd { color: var(--text); font-size: 13px; }
+.version { color: var(--text-dim); font-size: 12px; }
+
+.dropBlock {
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 80px;
+  justify-content: center;
+}
+
+.dropBlock:hover { background: #1c1c1c; }
+.dragging { background: #1c1c1c; border-color: #555; }
+
+.dropIcon { font-size: 16px; color: var(--text-dim); }
+.dropText { font-size: 13px; color: var(--accent); }
+.textDim { color: var(--text-dim); }
+.hiddenInput { display: none; }
+
+.idle { color: var(--text-muted); font-size: 13px; }
+
+.loading {
+  color: var(--text);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 0.6s steps(8) infinite;
+  font-size: 16px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--fake);
+  font-size: 13px;
+}
+
+.result { display: flex; flex-direction: column; gap: 4px; }
+
+.predictionLabel { font-size: 14px; }
+.predictionLabel strong { font-weight: 500; }
+
+.confidenceLine { font-size: 13px; color: var(--text); }
+
+.probsLine {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.textMuted { color: var(--text-muted); }
+
+.barWrap {
+  display: flex;
+  gap: 3px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.barSeg {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.resetBtn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+  text-align: left;
+}
+
+.resetBtn:hover { color: var(--text); }

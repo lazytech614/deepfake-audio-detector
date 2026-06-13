@@ -3,10 +3,18 @@ import os
 from fastapi import FastAPI
 from fastapi import UploadFile
 from fastapi import File
+from fastapi.middleware.cors import CORSMiddleware
 
 from predictor import predict_audio
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Next.js dev URL
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 UPLOAD_DIR = "uploads"
 
