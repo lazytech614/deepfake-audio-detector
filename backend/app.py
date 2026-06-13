@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.js dev URL
+    allow_origins=["http://localhost:3000", "https://deepfake-audio-detector-ten.vercel.app/"],  # Next.js dev URL
     allow_methods=["*"],
     allow_headers=["*"],
 )
