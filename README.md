@@ -368,6 +368,8 @@ http://127.0.0.1:8000/docs
 
 Swagger UI allows testing the API directly from the browser.
 
+##### *If your frontend is running on a port other than 3000, then update the CORS origins in the app.py file in backend folder*
+
 ---
 
 ## 8. Test Audio Prediction
