@@ -209,7 +209,11 @@ Total Feature Vector:
 ## Random Forest
 
 ```text
-Accuracy: 97.99%
+Accuracy: 96.91%
+F1 Score: 97%
+Confusion matrix: [[1345   51]
+                  [ 35  1361]]
+Equal Error Rate: 3.1%
 ```
 
 ---
@@ -217,29 +221,27 @@ Accuracy: 97.99%
 ## XGBoost
 
 ```text
-Accuracy: 98.96%
+Accuracy: 97.826%
+F1 Score: 98%
+Confusion matrix: [[1355   41]
+                  [ 20  1376]]
+Equal Error Rate: 1.79%
 ```
-
-### Classification Report
+## XGBoost Optimized
 
 ```text
-Precision: 99%
-Recall:    99%
-F1 Score:  99%
-```
-
-### Confusion Matrix
-
-```text
-[[1376   20]
- [   9 1387]]
+Accuracy: 98.28%
+F1 Score: 98%
+Confusion matrix: [[1364   32]
+                  [ 16  1380]]
+Equal Error Rate: 1.79%
 ```
 
 ### Cross Validation
 
 ```text
-Mean Accuracy: 98.58%
-Std Deviation: 0.32%
+Mean Accuracy: 98.51%
+Std Deviation: 0.19%
 ```
 
 ---
